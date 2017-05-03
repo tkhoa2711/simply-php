@@ -11,6 +11,17 @@ Create the necessary MySQL database and tables using the following command:
 mysql < db.sql
 ```
 
+Configure the database connection by creating a file named `config.ini` in
+the current directory:
+
+```conf
+[database]
+host = localhost
+username = root
+password = 
+dbname = php_db
+```
+
 Place the code in your configured web directory.
 
 Otherwise, to quickly test the website, the built-in web server of PHP could

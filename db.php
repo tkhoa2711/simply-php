@@ -6,7 +6,9 @@
  * @author  Khoa Le
  */
 
-$conn = new mysqli("localhost", "root", "", "php_db");
+$config = parse_ini_file('config.ini');
+
+$conn = new mysqli($config['host'], $config['username'], $config['password'], $config['dbname']);
 
 if ($conn->connect_error)
     die("Unable to connect to database");
